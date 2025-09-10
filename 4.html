@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios de los Modelos de IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+        }
+
+        .pricing-table {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #e5e7eb;
+        }
+
+        .pricing-table th {
+            background: #374151;
+            color: #f9fafb;
+            padding: 16px 12px;
+            font-weight: 600;
+            text-align: left;
+            border-bottom: 2px solid #6b7280;
+        }
+
+        .pricing-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .pricing-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        .price-input {
+            color: #059669;
+            font-weight: 600;
+        }
+
+        .price-output {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .company-google {
+            border-left: 4px solid #4285f4;
+        }
+
+        .company-openai {
+            border-left: 4px solid #10b981;
+        }
+
+        .company-anthropic {
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .insight-box {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px auto;
+            max-width: 800px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="min-h-screen flex flex-col justify-center items-center px-8 py-12">
+        <div class="text-center w-full max-w-7xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                El <span class="text-red-600">verdadero costo</span> de la IA
+            </h1>
+
+            <h2 class="text-2xl md:text-3xl text-gray-600 mb-8 font-medium">
+                Los tokens de entrada son los más caros
+            </h2>
+
+            <div class="overflow-x-auto mb-8">
+                <table class="pricing-table w-full max-w-6xl mx-auto text-sm">
+                    <thead>
+                        <tr>
+                            <th>Empresa</th>
+                            <th>Modelo</th>
+                            <th class="text-center">
+                                <i class="material-icons text-green-400 mr-1">input</i>
+                                Entrada (1M tokens)
+                            </th>
+                            <th class="text-center">
+                                <i class="material-icons text-red-400 mr-1">output</i>
+                                Salida (1M tokens)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="company-google">
+                            <td class="font-semibold">Google</td>
+                            <td>Gemini 2.5 Pro</td>
+                            <td class="price-input text-center">$1.25</td>
+                            <td class="price-output text-center">$10.00</td>
+                        </tr>
+                        <tr class="company-google">
+                            <td></td>
+                            <td>Gemini 2.5 Flash</td>
+                            <td class="price-input text-center">$0.30</td>
+                            <td class="price-output text-center">$2.50</td>
+                        </tr>
+                        <tr class="company-openai">
+                            <td class="font-semibold">OpenAI</td>
+                            <td>GPT-5</td>
+                            <td class="price-input text-center">$1.25</td>
+                            <td class="price-output text-center">$10.00</td>
+                        </tr>
+                        <tr class="company-openai">
+                            <td></td>
+                            <td>GPT-5 nano</td>
+                            <td class="price-input text-center">$0.05</td>
+                            <td class="price-output text-center">$0.40</td>
+                        </tr>
+                        <tr class="company-openai">
+                            <td></td>
+                            <td>GPT-4.1</td>
+                            <td class="price-input text-center">$3.00 (optimización)</td>
+                            <td class="text-center text-gray-400">-</td>
+                        </tr>
+                        <tr class="company-anthropic">
+                            <td class="font-semibold">Anthropic</td>
+                            <td>Claude 4.1 Opus</td>
+                            <td class="price-input text-center">$15.00</td>
+                            <td class="price-output text-center">$75.00</td>
+                        </tr>
+                        <tr class="company-anthropic">
+                            <td></td>
+                            <td>Claude 4 Sonnet (≤ 200K)</td>
+                            <td class="price-input text-center">$3.00</td>
+                            <td class="price-output text-center">$15.00</td>
+                        </tr>
+                        <tr class="company-anthropic">
+                            <td></td>
+                            <td>Claude 3.7 Sonnet</td>
+                            <td class="price-input text-center">$3.00</td>
+                            <td class="price-output text-center">$15.00</td>
+                        </tr>
+                        <tr class="company-anthropic">
+                            <td></td>
+                            <td>Claude 3.5 Haiku</td>
+                            <td class="price-input text-center">$0.80</td>
+                            <td class="price-output text-center">$4.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="material-icons text-amber-600 mr-2 text-2xl">lightbulb</i>
+                    <h3 class="text-xl font-bold text-amber-800">Insight Clave</h3>
+                </div>
+                <p class="text-lg text-amber-800 leading-relaxed">
+                    <span class="font-semibold">Al inicio nos preocupábamos por los tokens de salida...</span><br>
+                    Pero <span class="text-red-600 font-bold">los tokens de entrada son los que más cuestan</span>.<br><br>
+                    <span class="text-blue-600 font-semibold">Cada conversación larga incluye TODO el historial previo</span> como entrada.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación simple -->
+    <div class="fixed bottom-8 left-8">
+        <a href="3.html" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded font-medium">
+            ← Anterior
+        </a>
+    </div>
+
+    <div class="fixed bottom-8 right-8">
+        <a href="5.html" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded font-medium">
+            Siguiente →
+        </a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que no te explican al usar las APIs de los modelos de IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+        }
+        .code-block {
+            background-color: #1f2937;
+            color: #f9fafb;
+            border-radius: 8px;
+            padding: 24px;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            border: 3px solid #374151;
+        }
+        .keyword { color: #60a5fa; }
+        .string { color: #34d399; }
+        .function { color: #fbbf24; }
+        .comment { color: #9ca3af; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="min-h-screen flex flex-col justify-center items-center px-8">
+        <div class="text-center w-full max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-12 leading-tight">
+                Un proyecto de fin de semana<br>
+                que duró 6 meses
+            </h1>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="code-block text-left">
+<span class="keyword">import</span> OpenAI <span class="keyword">from</span> <span class="string">"openai"</span>;
+<span class="keyword">const</span> client = <span class="keyword">new</span> <span class="function">OpenAI</span>();
+
+<span class="keyword">const</span> response = <span class="keyword">await</span> client.responses.<span class="function">create</span>({
+  model: <span class="string">"gpt-5"</span>,
+  input: <span class="string">"Write a short bedtime story about a unicorn."</span>,
+});
+
+console.<span class="function">log</span>(response.output_text);
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación simple -->
+    <div class="fixed bottom-8 left-8">
+        <a href="index.html" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded font-medium flex items-center gap-2">
+            <span class="material-icons text-lg">home</span> Inicio
+        </a>
+    </div>
+    
+    <div class="fixed bottom-8 right-8">
+        <a href="2.html" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded font-medium">
+            Siguiente →
+        </a>
+    </div>
+
+</body>
+</html>
