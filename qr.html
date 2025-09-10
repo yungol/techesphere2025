@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecheSphere 2025 - Fondo de Presentación</title>
+    <title>TecheSphere 2025 - Código QR</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,10 +18,10 @@
             height: 100%;
         }
 
-        .fondo-presentacion {
+        .fondo-qr {
             width: 100vw;
             height: 100vh;
-            background-image: url('presentacion.jpg');
+            background-image: url('qr.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -30,11 +30,10 @@
             justify-content: center;
         }
 
-        /* Botón siguiente */
-        .btn-siguiente {
+        /* Botones de navegación */
+        .btn-navegacion {
             position: fixed;
             bottom: 32px;
-            right: 32px;
             padding: 8px 16px;
             background-color: transparent;
             color: white;
@@ -49,22 +48,31 @@
             z-index: 1000;
         }
 
-        .btn-siguiente:hover {
+        .btn-navegacion:hover {
             background-color: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
 
+        .btn-anterior {
+            left: 32px;
+        }
+
+        .btn-siguiente {
+            right: 32px;
+        }
+
         /* Modo pantalla completa automático en presentación */
         @media (max-width: 768px) {
-            .fondo-presentacion {
+            .fondo-qr {
                 background-attachment: scroll;
             }
         }
     </style>
 </head>
 <body>
-    <div class="fondo-presentacion">
-        <a href="qr.html" class="btn-siguiente">Siguiente</a>
+    <div class="fondo-qr">
+        <a href="index.html" class="btn-navegacion btn-anterior">← Anterior</a>
+        <a href="0.html" class="btn-navegacion btn-siguiente">Siguiente →</a>
     </div>
 
 </body>
